@@ -26,14 +26,18 @@ body {
 }
 
 .section-center {
-    max-width: 750px;
-    flex: 1 1 750px;
+    max-width: 950px;
+    flex: 1 1 950px;
 }
 
 #s-header,
 #s-footer {
-    flex: 0 0 48px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
+
+#s-header { flex-basis: 48px; }
+#s-footer { flex-basis: 128px; }
 
 #s-header .section-center,
 #s-hero .section-center {
@@ -62,16 +66,64 @@ body {
 }
 
 #header-links ul {
-    gap: 16px;
+    gap: 24px;
+}
+
+#hero-section {
+    gap: 32px;
+}
+
+#hero-content {
+    margin: 84px 0px;
+}
+
+h1 {
+    margin-bottom: 12px;
+}
+
+#hero-text {
+    margin-top: 12px;
+}
+
+#image-placeholder {
+    flex: 0 0 auto;
+    width: 475px;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-content {
+    margin: 64px 0px 96px 0px;
 }
 
 #info-header {
     text-align: center;
+    margin-top: 0px;
 }
 
 #info-cards-container {
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 48px;
+}
+
+.card {
+    flex: 0 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-image {
+    width: 140px;
+    height: 155px;
+}
+
+.card-text {
+    text-align: center;
 }
 
 .quote-attribution {
@@ -84,13 +136,107 @@ body {
     gap: 64px;
 }
 
-.card {
-    flex: 0 1 150px;
-}
-
 
 /*** Styling ***/
 
 body {
     font-family: "Roboto", sans-serif;
+}
+
+#s-header,
+#s-hero,
+#s-footer {
+    background-color: #1F2937;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+#header-logo,
+h1 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+#image-placeholder {
+    background-color: #657583;
+}
+
+.sign-up,
+#action-banner-container {
+    color: #E5E7EB;
+    background-color: #3882F6;
+}
+
+#action-banner-container {
+    border-radius: 8px;
+    margin: 64px 0px;
+}
+
+.sign-up {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 32px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#action-sign-up {
+    border: 2px white solid;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+}
+
+.card-image {
+    border: 4px #3882F6 solid;
+    border-radius: 20px;
+}
+
+#s-quote {
+    background-color: #E5E7EB;
+}
+
+#quote-container {
+    margin: 84px 0px;
+}
+
+.quote-text,
+.quote-attribution {
+    color: #1F2937;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+.quote-attribution {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0px;
+}
+
+#action-heading {
+    margin-top: 36px;
+    margin-bottom: 6px;
+}
+
+#action-text {
+    margin-top: 6px;
+    margin-bottom: 36px;
 }

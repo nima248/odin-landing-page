@@ -1,4 +1,96 @@
+/*** Flex layout ***/
+
+/* Main sections layout */
+
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin: 0px;
+    height: 100vh;
+}
+
+.main-section,
+.section-center {
+    display: flex;
+    align-items: center;
+}
+
+.main-section {
+    flex-grow: 1
+}
+
+.margin {
+    flex-grow: 1;
+    min-width: 50px;
+}
+
+.section-center {
+    max-width: 750px;
+    flex: 1 1 750px;
+}
+
+#s-header,
+#s-footer {
+    flex: 0 0 48px;
+}
+
+#s-header .section-center,
+#s-hero .section-center {
+    justify-content: space-between;
+}
+
+#s-info .section-center,
+#s-quote .section-center,
+#s-action .section-center,
+#s-footer  .section-center {
+    justify-content: center;
+}
+
+#s-quote .section-center {
+    max-width: 550px;
+}
+
+
+/* Sub-elements layout */
+
+#header-links ul,
+#info-cards-container,
+#action-banner-container {
+    display: flex;
+    align-items: center;
+}
+
+#header-links ul {
+    gap: 16px;
+}
+
+#info-header {
+    text-align: center;
+}
+
+#info-cards-container {
+    justify-content: center;
+    gap: 24px;
+}
+
+.quote-attribution {
+    text-align: right;
+}
+
+#action-banner-container {
+    justify-content: center;
+    width: 100%;
+    gap: 64px;
+}
+
+.card {
+    flex: 0 1 150px;
+}
+
+
+/*** Styling ***/
+
+body {
+    font-family: "Roboto", sans-serif;
 }
